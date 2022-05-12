@@ -1,37 +1,52 @@
 .header{
   height:150px;
+  margin-bottom:20px;
+  border: 1px solid #000;
 }
 .header_contents{
-  margin:0 auto; /* ←追加 */
+  margin:0 auto;
   width:980px;
+  border: 1px solid #000;
 }
 .logo{
   width:200px;
   border: 1px solid #000;
 }
 .contents{
-  margin:0 auto; /* ←追加 */
+  margin:0 auto;
   width:980px;
+  border: 1px solid #00F;
 }
 .visual{
   height:400px;
-  border: 1px solid #00F;
 }
 .copy{
+  width:300px;
   height:250px;
   margin-top:50px;
   border: 1px solid #000;
 }
+.text_wrapper{
+  height:200px;
+  display:flex;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
 .text{
-
+  width:380px;
+  border: 1px solid #F0F;
 }
 .menu{
-  
+  width:360px;
+  border: 1px solid #0F0;
 }
 .footer{
-
+  height:120px;
+  margin-top:30px;
+  border: 1px solid #000;
 }
 .footer_contents{
-  margin:0 auto; /* ←追加 */
+  margin:0 auto;
   width:980px;
+  text-align: center;
 }
