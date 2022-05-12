@@ -1,9 +1,17 @@
 .header{
   height:150px;
 }
+.header_contents{
+  margin:0 auto; /* ←追加 */
+  width:980px;
+}
 .logo{
   width:200px;
   border: 1px solid #000;
+}
+.contents{
+  margin:0 auto; /* ←追加 */
+  width:980px;
 }
 .visual{
   height:400px;
@@ -18,8 +26,12 @@
 
 }
 .menu{
-
+  
 }
 .footer{
 
+}
+.footer_contents{
+  margin:0 auto; /* ←追加 */
+  width:980px;
 }
