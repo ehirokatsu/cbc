@@ -1,3 +1,6 @@
+body{
+  margin:0; /*ブラウザの初期設定の余白を削除*/
+}
 .header{
   height:150px;
   margin-bottom:20px;
@@ -8,14 +11,13 @@
 .header_contents{
   margin:0 auto;
   width:980px;
-  border: 1px solid #000;
 }
 .logo{
   width:200px;
   color:#52b6ac;
   font-size:12px;
-  display:flex;
-  align-items:center;
+  display: flex;
+  align-items: center;
 }
 .logo img{
   width:50px;
@@ -24,7 +26,6 @@
 .contents{
   margin:0 auto;
   width:980px;
-  border: 1px solid #00F;
 }
 .visual{
   height:400px;
@@ -33,30 +34,30 @@
   align-items: center;
 }
 .copy{
-  color:#FFF; /*文字の色指定*/
-  margin-left:100px; /*左側の余白*/
+  color:#FFF;
+  margin-left:100px;
   font:normal 32px/2em sans-serif;
 }
 .text_wrapper{
   height:200px;
   display:flex;
-  justify-content: center; /*左右センター*/
+  justify-content: center;
 }
 .text{
   width:280px;
   height:160px;
   margin-top:20px;
   padding-right:15px;
-  border-right:8px solid #666; /*右側の黒い線*/
+  border-right:8px solid #000;
   font:normal 18px/2em sans-serif;
   display:flex;
-  align-items: center; /*天地センター*/
+  align-items: center;
 }
 .menu{
   width:300px;
   font:normal 18px/1.6em sans-serif;
   display:flex;
-  align-items: center; /*天地センター*/
+  align-items: center;
 }
 .footer{
   height:120px;
