@@ -40,16 +40,23 @@
 .text_wrapper{
   height:200px;
   display:flex;
-  justify-content: center;
-  border: 1px solid #ccc;
+  justify-content: center; /*左右センター*/
 }
 .text{
-  width:380px;
-  border: 1px solid #F0F;
+  width:280px;
+  height:160px;
+  margin-top:20px;
+  padding-right:15px;
+  border-right:8px solid #666; /*右側の黒い線*/
+  font:normal 18px/2em sans-serif;
+  display:flex;
+  align-items: center; /*天地センター*/
 }
 .menu{
-  width:360px;
-  border: 1px solid #0F0;
+  width:300px;
+  font:normal 18px/1.6em sans-serif;
+  display:flex;
+  align-items: center; /*天地センター*/
 }
 .footer{
   height:120px;
