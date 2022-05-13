@@ -61,10 +61,12 @@
 .footer{
   height:120px;
   margin-top:30px;
-  border: 1px solid #000;
+  background-color:#bec9c9;
+  display:flex;
+  justify-content: center;
 }
 .footer_contents{
-  margin:0 auto;
   width:980px;
   text-align: center;
+  align-self: flex-end;
 }
