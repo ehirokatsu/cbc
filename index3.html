@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample</title>
+<style>
+div {
+	line-height: 1.2em;
+    margin-left: 1em;
+}
+h3 {
+    margin-bottom: 0.5em;
+}
+</style>
+</head>
+
+<body>
+<h1>フォームの要素を取得する</h1>
+<form name="form">
+	<div>
+		<h3>text</h3>
+		<input name="text" type="text" value="hello, JavaScript form!">
+	</div>
+	<div>
+		<h3>radio</h3>
+		<input name="radio" type="radio" value="1" checked> item 1
+		<input name="radio" type="radio" value="2"> item 2
+		<input name="radio" type="radio" value="3"> item 3
+	</div>
+	<div>
+		<h3>checkbox</h3>
+		<input name="checkA" type="checkbox" checked> check A
+		<input name="checkB" type="checkbox"> check B
+	</div>
+	<div>
+		<h3>select</h3>
+		<select name="select">
+			<option value="1">selection 1</option>
+			<option value="2">selection 2</option>
+			<option value="3">selection 3</option>
+		</select>
+	</div>
+	<div>
+		<h3>textArea</h3>
+		<textarea name="textArea">write some text here.</textarea>
+	</div>
+	<div>
+		<h3>button</h3>
+		<input name="button" type="button" value="button">
+	</div>
+</form>
+<script>
+var form = document.forms.form;
+var button = form.button;
+button.addEventListener('click', getFormValues);
+function getFormValues() {
+	for(var i = 0; i < form.length; i++)
+	{
+		var item = form[i];
+		var name = item.name;
+		var type = item.type;
+
+		//console.log(form.length);
+		//console.log('i=' + i);
+		switch(type){
+			case 'radio':
+				console.log(name, type, form[name].value);
+				//console.log(name, type, item.value);
+				break;
+			case 'checkbox':
+				console.log(name, type, item.checked);
+				//console.log(name, type, item.value);
+				break;
+			default:
+				console.log(name, type, item.value);
+				break;
+		}
+	}
+
+}
+
+var object = {name: 'japan', city: 'tokyo'};
+console.log(object);
+</script>
+</body>
+</html>

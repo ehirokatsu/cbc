@@ -1,73 +1,117 @@
+@charset "utf-8";
 body{
-  margin:0; /*ブラウザの初期設定の余白を削除*/
+    font:normal 16px/1.8em Arial,Helvetica,sans-serif;
 }
-.header{
-  height:150px;
-  margin-bottom:20px;
-  background-color:#d9e021;
-  display: flex;
-  align-items: center;
+a{
+    text-decoration: none;
 }
-.header_contents{
-  margin:0 auto;
-  width:980px;
+header, footer, nav, main{
+    margin:2px;
+    border: 2px solid #f00;
 }
-.logo{
-  width:200px;
-  color:#52b6ac;
-  font-size:12px;
-  display: flex;
-  align-items: center;
+li, form, img, h1, h2{
+    margin:2px;
+    border: 2px solid #f00;
 }
-.logo img{
-  width:50px;
-  margin-right:10px;
+header{
+
 }
-.contents{
-  margin:0 auto;
-  width:980px;
+.header__contents{
+
 }
-.visual{
-  height:400px;
-  background: url("../images/top_bg.jpg") no-repeat center center;
-  display: flex;
-  align-items: center;
+.header__contents--text{
+
 }
-.copy{
-  color:#FFF;
-  margin-left:100px;
-  font:normal 32px/2em sans-serif;
+.header__contents--logo{
+
 }
-.text_wrapper{
-  height:200px;
-  display:flex;
-  justify-content: center;
+.header__image{
+
 }
-.text{
-  width:280px;
-  height:160px;
-  margin-top:20px;
-  padding-right:15px;
-  border-right:8px solid #000;
-  font:normal 18px/2em sans-serif;
-  display:flex;
-  align-items: center;
+nav{
+
+}
+nav ul{
+
+}
+nav ul li{
+
+}
+nav ul li a{
+
+}
+main{
+
 }
 .menu{
-  width:300px;
-  font:normal 18px/1.6em sans-serif;
-  display:flex;
-  align-items: center;
+
+}
+.menu__content{
+
+}
+.menu__content--text{
+
+}
+.menu__content--text h1{
+
+}
+.menu__content--text p{
+
+}
+.menu__content--image{
+
+}
+.vision{
+
+}
+.vision__image{
+
+}
+.vision__column{
+
+}
+.menu_column--item{
+
+}
+.menu_column--item-img{
+
+}
+footer{
+
 }
 .footer{
-  height:120px;
-  margin-top:30px;
-  background-color:#bec9c9;
-  display:flex;
-  justify-content: center;
+
 }
-.footer_contents{
-  width:980px;
-  text-align: center;
-  align-self: flex-end;
+.footer h2{
+
+}
+.footer{
+
+}
+.footer__image{
+
+}
+.footer__column{
+
+}
+.footer__column--form{
+
+}
+.footer__column--form form{
+    
+}
+.footer__column--form form p{
+    
+}
+.footer__column--form input[type="text"]{
+    
+}
+.footer__column--form textarea{
+    
+}
+.footer__column--map{
+
+}
+.footer__copy{
+    
 }

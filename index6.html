@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample</title>
+<script>
+
+const url = 'http://api.open-notify.org/astros.json';
+function getSpacePeople(url) {
+	const request = new XMLHttpRequest();
+	request.addEventListener('load', () => {
+		const people = JSON.parse(request.response).people;
+		console.log(people);
+	});
+	request.open('GET', url);
+	request.send();
+}
+getSpacePeople(url);
+
+function async(arg){
+	console.log('start');
+	setTimeout(() => {
+		console.log(Math.floor(arg / 1000) + 'seconds delay is up');
+	}, arg);
+}
+async(1000);
+</script>
+</head>
+
+<body>
+<h1>JSONからデータを解析して取り出す</h1>
+</body>
+</html>

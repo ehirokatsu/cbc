@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample</title>
+<style>
+* {
+	margin: 0;
+}
+body {
+	font-family: 'Lato', sans-serif;
+	background: #eee;
+}
+article {
+	height: 250px;
+	margin: 100px auto;
+	text-align: center;
+	line-height: 1.9;
+}
+a {
+	color: #0b8793;
+}
+#main-visual {
+	background: linear-gradient(to right, #360033 10%, #0b8793 90%);
+	height: 500px;
+}
+
+footer {
+	padding: 10px;
+	text-align: center;
+	border-top: solid 1px #bbb;
+}
+footer a {
+	color: #666;
+	text-decoration: none;
+}
+.inner {
+	width: 400px;
+	margin: 0 auto;
+	position: relative;
+}
+#top-head {
+	position: fixed;
+	width: 100%;
+	padding: 20px 10px 0 0;
+	line-height: 1;
+}
+#top-head:after {
+	content: "";
+	display: block;
+	height: 1px;
+	background: white;
+	width: 400px;
+	margin: 20px auto 0;
+	clear: both;
+}
+#top-head a,
+#top-head {
+	color: white;
+	text-decoration: none;
+}
+#top-head .logo {
+	font-size: 24px;
+	margin-left: 10px;
+}
+#global-nav ul {
+	list-style: none;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	font-size: 14px;
+}
+#global-nav ul li {
+	float: left;
+	position: relative;
+}
+#global-nav ul li a {
+	padding: 0 10px;
+}
+#global-nav ul li:after {
+	position: absolute;
+	content: "";
+	display: block;
+	width: 100%;
+	height: 3px;
+	bottom: -10px;
+	transition: 0.3s;
+}
+#global-nav ul li:hover:after {
+	background: white;
+	bottom: -20px;
+}
+#top-head.fixed {
+	padding-top: 10px;
+	padding-bottom: 0px;
+	background: rgba(255, 255, 255, 0.7);
+}
+#top-head.fixed .logo {
+	font-size: 18px;
+	color: #333;
+	margin-left: 5px;
+}
+#top-head.fixed:after {
+	width: 100%;
+	margin-top: 10px;
+}
+#top-head.fixed #global-nav ul li a {
+	color: #333;
+	padding: 0 5px;
+}
+#top-head.fixed #global-nav ul li:after {
+	bottom: 0;
+}
+#top-head.fixed #global-nav ul li:hover:after {
+	background: #0b8793;
+	bottom: -10px;
+}
+#top-head,
+#top-head:after,
+#top-head .logo,
+#global-nav ul li,
+#global-nav ul li a {
+	transition: 0.3s;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+	const app = new Vue({
+		el: '#app',
+		data: {
+			scrollY: 0
+		},
+		mounted(){
+			window.addEventListener('scroll', this.handleScroll)
+		},
+		methods: {
+			handleScroll(){
+				this.scrollY = window.pageYOffset;
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+<div id="app">
+<header id="top-head" v-bind:class="{'fixed': scrollY > 50}">
+	<div class="inner">
+		<h1 class="logo">Fixed Nav</h1>
+		<nav id="global-nav">
+			<ul>
+				<li><a href="#">HOME</a></li>
+				<li><a href="#">WORKS</a></li>
+				<li><a href="#">ABOUT</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<div id="main-visual"></div>
+<h2>要素をセレクタで選ぶ</h2>
+<article>
+	<h3>scrollY: {{scrollY}}</h3>
+	<p>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non unde magni atque minus laudantium inventore fugit adipisci consequuntur. Quia, alias autem dolore obcaecati fuga ullam quibusdam dolorum dolores velit nemo.
+	</p>
+</article>
+<footer>
+	<p><a href="http://www.fumiononaka.com" target="_blank">FumioNonaka.com</a></p>
+</footer>
+</div>
+</body>
+
+</html>

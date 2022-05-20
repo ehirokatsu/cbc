@@ -1,0 +1,112 @@
+@charset "utf-8";
+body{
+    font:normal 16px/1.8em Arial,Helvetica,sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.main__list, .main__list--item, .main__list--item1, .main__list--item2, .main__list--item3{
+    margin:2px;
+    border: 2px solid #f00;
+}
+/*
+header, footer, nav, main, .main__img{
+    margin:2px;
+    border: 2px solid #f00;
+}
+form, h1, h2{
+    margin:2px;
+    border: 2px solid #f00;
+}
+*/
+
+.header__contents{
+    /*margin: auto;
+    width: 75%;*/
+    height: 150px;
+    display: flex;/*要素内を横並びにする*/
+    justify-content: center;/*display flexの要素を中央揃えする*/
+    align-items: center;/*要素内の要素*/
+   background-color: rgb(255, 254, 221);
+}
+.logo_text{
+    margin:10px;/*ロゴと間隔を空けるため*/
+    color:#27c9a0;
+    font-size:16px;
+}
+.main__img{
+    margin:50px;
+    height: 500px;
+    background: url("../images/top_bg.jpg");
+    display: flex;/*copyを中央に配置*/
+    align-items: center;
+}
+.main__copy{
+    color:#ffffff;
+    font-size:26px;
+    margin-left: 100px;
+
+}
+.main__contents{
+    display: flex;/*要素内を横並びにする*/
+    justify-content: center;/*display flexの要素を中央揃えする*/
+    align-items: center;/*要素内の要素*/
+}
+.main__text{
+    margin:15px;
+    padding: 15px;
+    width: 230px;
+    border-right:8px solid #000;
+}
+.main__menu{
+    margin:15px;
+}
+li{
+    list-style: disc;
+
+}
+.footer__contents{
+    height: 100px;
+    background-color: rgb(164, 164, 164);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.footer__text{
+
+}
+.main__list{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.main__list--item1{
+    flex: 1;
+}
+.main__list--item2{
+    flex: 1;
+}
+.main__list--item3{
+    flex: 1;
+}
+#change_btn{
+    width: 200px;
+    padding: 10px 0;
+    text-align: center;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+.text{
+    padding: 20px;
+    border: 1px solid #000;
+}
+.hover_off{
+    color: #000;
+    background: #ffffff;
+}
+.hover_on{
+    color: #ffffff;
+    background: #0094d7;
+}

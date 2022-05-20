@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">H1タイトル</h1>
+    <button id="button" type="button" data-new-title="新しいボタン">ボタン</button>
+    <br>
+    <button id="button2" type="button" data-new-title="別のボタン">ボタン</button>
+    <br>
+    <img id="photo" src="images/image_001.png">
+    <br>
+    <form name="form">
+        
+    </form>
+
+<script type="text/javascript">
+
+var i = 100
+    document.write(i);
+    function func(min, max) {
+        var i = Math.floor(Math.random()*(max - min +1)) + min;
+        document.write(i);
+    }
+
+    var button = document.getElementById('button');
+    var button2 = document.getElementById('button2');
+    var title = document.getElementById('title');
+    //var newTitle = 'テキスト変更';
+    //HTMLタグにonclickと書くこともできるが、関数名が変わるとHTMLも編集する必要がある。イベントリスナーならscriptだけでいい
+    button.addEventListener('click', changeTitle);
+    button2.addEventListener('click', changeTitle);
+
+    function changeTitle(event) {
+        //title.textContent = newTitle;
+        //button.textContent = newTitle;
+        var button = event.target;
+        button.textContent = button.dataset.newTitle;
+    }
+
+    var photoElement = document.getElementById('photo');
+    photoElement.addEventListener('click', changePhote);
+    var files = [
+        'images/image_001.png',
+        'images/image_002.png',
+        'images/image_003.png',
+        'images/image_004.png',
+    ];
+    var j = 0;
+    function changePhote() {
+
+        j = (j + 1) % files.length;
+        var photo = files[j]; 
+        photoElement.setAttribute('src', photo);
+
+    }
+
+    var array = new Array();
+    array.push(0);
+    array[1] = 1;
+    console.log(array);
+    console.log(array[0]);
+
+</script>
+<noscript>JavaScriptが利用できません。</noscript>
+</body>
+</html>

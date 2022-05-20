@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style9.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+<script>
+	$(function(){
+		$('#change_btn').click(function(){
+			//console.log('aaa');
+			$('#box').css({'color': '#0094d7'})
+		});
+	});
+	$(function(){
+		$('.text').click(function(){
+			$('.text').css({'color': '#0094d7'})
+		});
+	});
+	$(function(){
+		$('.text').mouseover(function(){
+			$(this).removeClass('hover_off');
+			$(this).addClass('hover_on');
+		});
+		$('.text').mouseout(function(){
+			$(this).removeClass('hover_on');
+			$(this).addClass('hover_off');
+		});
+		
+	});
+	$(function(){
+ 		$(`p`).on(`click`, function(){
+  			$(`p`).css(`color`, `red`);
+ 		});
+	});
+</script>
+<body>
+<section>
+	<p>おはよう！</p>
+<p>こんにちは！</p>
+<p>こんばんは!</p>
+	<div id="change_btn">ボタン</div>
+	<div id="box">テキスト</div>
+	<div class="text" class="hover_off">
+		背景色変更サンプル
+	</div>
+	<div class="text" class="hover_off">
+		背景色変更サンプル2
+	</div>
+	<div class="text" class="hover_off">
+		背景色変更サンプル3
+	</div>
+</section>
+<header>
+	<div class="header__contents">
+		<img src="images/cbc_icon.svg" height="100px" width="100px">
+		<div class="logo_text">CBT WEBサイト</div> 
+	</div>
+</header>
+<main>
+	<div class="main__img">
+		<div class="main__copy">
+			楽しく学習。<br>
+			もっと学習。
+		</div>
+	</div>
+	<div class="main__contents">
+		<div class="main__text">
+		html+cssを習得するには、実際に作りながら覚えるのが一番！
+        英語でも文法を学ぶより、話すことが上達への近道なように。
+		</div>
+		<div class="main__menu">
+			<li><a href="page1.html">ホームページの作り方</a></li>
+			<li><a href="page2.html">htmlとcssをつかう</a></li>
+			<li><a href="page3.html">htmlで枠を作る</a></li>
+			<li><a href="page4.html">htmlの枠の使い方</a></li>
+			<li><a href="page5.html">cssでデザインする</a></li>
+		</div>
+
+	</div>
+	<div class="main__list">
+		<div class="main__list--item1">あいうえお</div>
+		<div class="main__list--item2">かきくけこ</div>
+		<div class="main__list--item3">さいすせそ</div>
+	</div>
+</main>
+<footer>
+	<div class="footer__contents">
+		<div class="footer__text">
+		CRI	
+		</div>
+	</div>
+</footer>
+</body>
+</html>

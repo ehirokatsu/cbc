@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sample</title>
+</head>
+<style>
+input[type=checkbox] {
+  display: none;
+}
+</style>
+<body>
+<h1>練習</h1>
+<form name="form">
+	<label name="label_carrot">
+		<img src="images/carrot.jpg" width="200" height="200">
+		<input name="checkA" type="checkbox" value="100" display: none> 商品A 100円
+	</label>
+	<br>
+	<label name="label_orange">
+		<img src="images/orange.jpg" width="200" height="200">
+		<input name="checkB" type="checkbox" value="200"> 商品B 200円
+	</label>
+	<br>
+	<label name="label_strawberry">
+	<img src="images/strawberry.jpg" width="200" height="200">
+	<input name="checkC" type="checkbox" value="300"> 商品C 300円
+	</label>
+	<br>
+	<label for="" name="label1">合計金額</label><br>
+	<label id="total" for="" name="total"></label><br>
+	<button type="button" name="button">テキスト変更</button>
+</form>
+<script>
+var form = document.forms.form;
+var check = form.checkA;
+var button = form.button;
+//button.addEventListener('click', calTotal);
+//button.addEventListener('click', calTotal);
+form.checkA .addEventListener('click', calTotal);
+form.checkB = addEventListener('click', calTotal);
+form.checkC = addEventListener('click', calTotal);
+var label = document.getElementsByName('total');
+	//console.log(label);
+function calTotal(){
+	var check1 = form.checkA.value;
+	var check2 = form.checkB.value;
+	var check3 = form.checkC.value;
+
+	//var button = document.getElementById('button');
+	var button = form.button;
+	//console.log(button);
+	//var label = document.getElementById('total');
+	//nameではtextcontentに設定しても画面に反映されない
+	var label = document.getElementById('total');
+	
+	var sum = 0;
+
+	if (form.checkA.checked) {
+		sum = sum + Number(check1);
+	}
+	if (form.checkB.checked) {
+		sum = sum + Number(check2);
+	}
+	if (form.checkC.checked) {
+		sum = sum + Number(check3);
+	}
+	label.textContent  = sum;
+	//button.textContent = sum;
+	console.log(label);
+}
+</script>
+</body>
+</html>
