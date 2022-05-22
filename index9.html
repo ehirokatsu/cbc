@@ -11,6 +11,7 @@
 
 </head>
 <script>
+	//クリック
 	$(function(){
 		$('#change_btn').click(function(){
 			//console.log('aaa');
@@ -22,6 +23,8 @@
 			$('.text').css({'color': '#0094d7'})
 		});
 	});
+
+	//マウスオーバー
 	$(function(){
 		$('.text').mouseover(function(){
 			$(this).removeClass('hover_off');
@@ -34,6 +37,48 @@
 		
 	});
 
+	//スライドボックス
+	$(function(){
+		$('.text3').click(function(){
+			//nextは.text3の兄弟要素を取得する
+			//子要素は取得しない
+			//引数にクラスを指定したら、次の兄弟要素がそのクラスの場合のみ判定する。一致しなければ処理しない
+			$(this).next('p').slideToggle('fast');
+			$(this).next('.text3_ac').slideToggle('fast');
+		});
+	});
+	
+	//スクロール量で表示、ボタン押下でトップに移動
+	$(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() > 30) {
+				$('.pageTop_btn').stop(true).fadeIn();
+			} else {
+				$('.pageTop_btn').stop(true).fadeOut();
+			}
+		});
+		$('.pageTop_btn').click(function(){
+			$('body,html').animate({scrollTop:0}, 500);
+		});
+	});
+	//ツールチップ
+	$(function(){
+  		$('.tooltips').hide();
+  		$('#nav li').hover(function(){
+      		$(this).children('.tooltips').fadeIn('fast');
+   		 },
+   		 function(){
+      		$(this).children('.tooltips').fadeOut('slow');
+    	});
+	});
+
+	//Javascriptのみで実現
+	window.addEventListener('load', init);
+	function init(){
+		var btn = document.getElementById('change_btn');
+		console.log(btn.textContent);
+	}
+
 </script>
 <body>
 <section>
@@ -45,9 +90,42 @@
 	<div class="text" class="hover_off">
 		背景色変更サンプル2
 	</div>
-	<div class="text" class="hover_off">
+	<div class="text3" class="hover_off">
 		背景色変更サンプル3
+
 	</div>
+	<p>隠れテキスト</p>
+	<div class="text3_ac">隠れテキスト２</div>	
+	<div class="pageTop_btn">
+		<img class="img_top" src="images/top.png">
+	</div>
+
+	<div id="nav">
+		<ul>
+			<li>1
+				<p class="tooltips">ツールチップ1</p>
+			</li>
+			<li>2
+				<p class="tooltips">ツールチップ2</p>
+			</li>
+			<li>3
+				<p class="tooltips">ツールチップ3</p>
+			</li>
+		</ul>
+	</div>
+	<!--没案
+	<div class="hover_wrap">
+		<div class="hover1">
+			<div class="hover1_child">1</div>
+		</div>
+		<div class="hover2">
+			<div class="hover2_child">2</div>
+		</div>
+		<div class="hover3">
+			<div class="hover3_child">3</div>
+		</div>
+	</div>
+	-->
 </section>
 <header>
 	<div class="header__contents">
@@ -88,6 +166,7 @@
 		CRI	
 		</div>
 	</div>
+
 </footer>
 </body>
 </html>
