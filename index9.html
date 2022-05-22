@@ -72,6 +72,20 @@
     	});
 	});
 
+	//足し算
+	$(function(){
+		$('#calc').change(function(){
+			//val()はvalue属性のこと。type=numberを取得、または設定したいときに使用する
+			var numA = parseInt($('.numberA').val());
+			var numB = parseInt($('.numberB').val());
+			
+			//textは、要素のテキストそのままに設定する
+			$('#number_total').text(numA + numB);
+			//type=numberに設定したい時はval()を使う
+			$('.total').val(numA + numB);
+		});
+	});
+
 	//Javascriptのみで実現
 	window.addEventListener('load', init);
 	function init(){
@@ -126,6 +140,12 @@
 		</div>
 	</div>
 	-->
+	<div id="calc">
+		<span><input class="numberA" type="number"></span> + 
+		<span><input class="numberB" type="number"></span> = 
+		<span id="number_total"></span>
+		<span><input class="total" type="number"></span>
+	</div>
 </section>
 <header>
 	<div class="header__contents">
