@@ -34,6 +34,7 @@ if (!empty($_POST['id'])
 </head>
 <script>
 $(function(){
+	//Jquery/uiの読み込み必須
 	$('.drag').draggable({       /* class="drag"が指定されている要素をdraggableに */
     containment:'#drag-area',  /* ドラッグできる範囲 */
     cursor:'move',             /* ドラッグ時のカーソル形状 */
